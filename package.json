@@ -1,0 +1,32 @@
+{
+  "name": "sep-sales-wrapper",
+  "version": "14.2.1",
+  "description": "Android APK Capacitor Wrapper for SEP Sales App with Location, Camera, RawBT, and Direct Bluetooth Printing support",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "copy-dist": "node scripts/copy-dist.js",
+    "sync": "npm run copy-dist && npx cap sync",
+    "sync:android": "npx cap sync android",
+    "open": "npx cap open android",
+    "build:apk": "npm run copy-dist && npm run sync:android && cd android && gradlew.bat clean assembleProductionDebug",
+    "build:uat": "npm run copy-dist && npm run sync:android && node scripts/apply-uat-config.js && cd android && gradlew.bat clean assembleUatDebug",
+    "upload:r2": "node scripts/upload-release.js",
+    "release": "npm run build:apk && node scripts/upload-release.js"
+  },
+  "dependencies": {
+    "@capacitor-community/sqlite": "^6.0.2",
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.2",
+    "@capacitor/camera": "^6.1.2",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/geolocation": "^6.1.0",
+    "@capacitor/preferences": "^6.0.3"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1144.0",
+    "@aws-sdk/lib-storage": "^3.1144.0",
+    "@capacitor/cli": "^6.2.0",
+    "dotenv": "^18.0.5"
+  }
+}

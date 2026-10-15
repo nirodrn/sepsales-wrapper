@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "959051118175",
+    "firebase_url": "https://sepm-location-track-service-default-rtdb.firebaseio.com",
+    "project_id": "sepm-location-track-service",
+    "storage_bucket": "sepm-location-track-service.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959051118175:android:db1c1e8c02fd9370948dea",
+        "android_client_info": {
+          "package_name": "com.sewanagala.sepsale.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-t4VYRDlYZnqRuWA_bPq35-KFA-LD7as"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

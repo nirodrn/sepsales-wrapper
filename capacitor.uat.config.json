@@ -1,0 +1,18 @@
+{
+  "appId": "com.sewanagala.sepsale.uat",
+  "appName": "SEP Sales UAT",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "plugins": {
+    "Geolocation": {
+      "permissions": ["location"]
+    },
+    "Camera": {
+      "permissions": ["camera"]
+    }
+  }
+}

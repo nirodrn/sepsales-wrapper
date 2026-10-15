@@ -1,0 +1,31 @@
+# Release credentials and local configuration
+.env
+.env.*
+!.env.example
+android/local.properties
+
+# Dependencies and generated web bundles
+node_modules/
+www/
+android/app/src/main/assets/public/
+
+# Android / Gradle build output
+.gradle/
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+*.apk
+*.aab
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

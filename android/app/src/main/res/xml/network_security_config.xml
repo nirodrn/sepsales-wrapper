@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Explicitly trust Firebase & Google domains — avoids extra SSL handshake
+        cert chain validation overhead on first connection to each domain.
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Firebase Hosting (main web app) -->
+        <domain includeSubdomains="true">sepmsale.web.app</domain>
+        <domain includeSubdomains="true">firebaseapp.com</domain>
+        <domain includeSubdomains="true">firebase.google.com</domain>
+
+        <!-- Firestore & Realtime Database -->
+        <domain includeSubdomains="true">firestore.googleapis.com</domain>
+        <domain includeSubdomains="true">firebasedatabase.app</domain>
+
+        <!-- Firebase Auth -->
+        <domain includeSubdomains="true">identitytoolkit.googleapis.com</domain>
+        <domain includeSubdomains="true">securetoken.googleapis.com</domain>
+
+        <!-- Firebase Storage -->
+        <domain includeSubdomains="true">storage.googleapis.com</domain>
+        <domain includeSubdomains="true">firebasestorage.googleapis.com</domain>
+
+        <!-- Google APIs (Maps, Fonts, CDN) -->
+        <domain includeSubdomains="true">googleapis.com</domain>
+        <domain includeSubdomains="true">gstatic.com</domain>
+        <domain includeSubdomains="true">fonts.googleapis.com</domain>
+        <domain includeSubdomains="true">fonts.gstatic.com</domain>
+
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Allow all other cleartext traffic for local dev / RawBT -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

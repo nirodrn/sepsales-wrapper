@@ -1,0 +1,34 @@
+{
+	"appId": "com.sewanagala.sepsale",
+	"appName": "SEP Sales",
+	"webDir": "www",
+	"server": {
+		"url": "https://sepmsale.web.app",
+		"cleartext": true,
+		"androidScheme": "https",
+		"allowNavigation": [
+			"rawbt:*",
+			"intent:*",
+			"sepmsale.web.app",
+			"*.firebaseapp.com",
+			"*"
+		]
+	},
+	"android": {
+		"allowMixedContent": true,
+		"captureInput": true,
+		"webContentsDebuggingEnabled": true
+	},
+	"plugins": {
+		"Geolocation": {
+			"permissions": [
+				"location"
+			]
+		},
+		"Camera": {
+			"permissions": [
+				"camera"
+			]
+		}
+	}
+}

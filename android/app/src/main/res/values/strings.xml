@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SEP Sales</string>
+    <string name="title_activity_main">SEP Sales</string>
+    <string name="package_name">com.sewanagala.sepsale</string>
+    <string name="custom_url_scheme">com.sewanagala.sepsale</string>
+</resources>
